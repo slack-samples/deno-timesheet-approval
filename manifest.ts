@@ -1,6 +1,6 @@
 import { Manifest } from "deno-slack-sdk/mod.ts";
-import SampleWorkflow from "./workflows/sample_workflow.ts";
-import SampleObjectDatastore from "./datastores/sample_datastore.ts";
+import CollectHoursWorkflow from "./workflows/collect_hours.ts";
+import GoogleProvider from "./external_auth/google_provider.ts";
 
 /**
  * The app manifest contains the app's configuration. This
@@ -8,17 +8,11 @@ import SampleObjectDatastore from "./datastores/sample_datastore.ts";
  * https://api.slack.com/future/manifest
  */
 export default Manifest({
-  name: "deno-starter-template",
-  description: "A template for building Slack apps with Deno",
+  name: "Timesheet Approval",
+  description: "A form for collecting hours worked",
   icon: "assets/default_new_app_icon.png",
-  workflows: [SampleWorkflow],
-  outgoingDomains: [],
-  datastores: [SampleObjectDatastore],
-  botScopes: [
-    "commands",
-    "chat:write",
-    "chat:write.public",
-    "datastore:read",
-    "datastore:write",
-  ],
+  workflows: [CollectHoursWorkflow],
+  externalAuthProviders: [GoogleProvider],
+  outgoingDomains: ["sheets.googleapis.com"],
+  botScopes: ["commands"],
 });
