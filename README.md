@@ -6,6 +6,7 @@ in a custom function.
 
 **Guide Outline**:
 
+- [Supported Workflows](#supported-workflows)
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
   - [Clone the Sample App](#clone-the-sample-app)
@@ -21,6 +22,10 @@ in a custom function.
 - [Resources](#resources)
 
 ---
+
+## Supported Workflows
+
+- **Collect billable hours**: Gather and save timesheet info to a Google sheet.
 
 ## Setup
 
