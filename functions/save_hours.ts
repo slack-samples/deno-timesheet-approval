@@ -1,7 +1,7 @@
 import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
 
 // Configuration information for the storing spreadsheet
-const SPREADSHEET_RANGE = "Time Log!A2:E2";
+const GOOGLE_SPREADSHEET_RANGE = "Time Log!A2:E2";
 
 /**
  * Functions are reusable building blocks of automation that accept
@@ -80,14 +80,14 @@ export default SlackFunction(
 
     // Append times to spreadsheet
     const url =
-      `https://sheets.googleapis.com/v4/spreadsheets/${env.SPREADSHEET_ID}/values/${SPREADSHEET_RANGE}:append?valueInputOption=USER_ENTERED`;
+      `https://sheets.googleapis.com/v4/spreadsheets/${env.GOOGLE_SPREADSHEET_ID}/values/${GOOGLE_SPREADSHEET_RANGE}:append?valueInputOption=USER_ENTERED`;
     const sheets = await fetch(url, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${auth.external_token}`,
       },
       body: JSON.stringify({
-        range: SPREADSHEET_RANGE,
+        range: GOOGLE_SPREADSHEET_RANGE,
         majorDimension: "ROWS",
         values: [[employee, startDate, endDate, timeOff, hours]],
       }),

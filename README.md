@@ -150,7 +150,7 @@ the file (replacing `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
 
 ```bash
 # .env
-SPREADSHEET_ID=YOUR_SPREADSHEET_ID
+GOOGLE_SPREADSHEET_ID=YOUR_SPREADSHEET_ID
 ```
 
 #### Production environment variables
@@ -161,7 +161,7 @@ your deployed app is installed, use the following command (once again, replacing
 `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
 
 ```sh
-$ slack env add SPREADSHEET_ID YOUR_SPREADSHEET_ID
+$ slack env add GOOGLE_SPREADSHEET_ID YOUR_SPREADSHEET_ID
 ```
 
 ## Create a Link Trigger
