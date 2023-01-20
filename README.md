@@ -130,8 +130,7 @@ In this app, the inputs of submitted forms are stored in a Google Sheet.
 
 To prepare this external datastore, start by
 [creating a blank spreadsheet](https://docs.google.com/spreadsheets/create)
-using the authenticated account, renaming the sheet tab to "Time Log", and
-adding the following headers to Row 1:
+using your authenticated account, then add the following headers to Row 1:
 
 ```
 Employee | Time in | Time out | Breaks (min) | Hours

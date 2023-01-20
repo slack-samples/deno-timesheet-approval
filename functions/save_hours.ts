@@ -1,7 +1,8 @@
 import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
 
 // Configuration information for the storing spreadsheet
-const GOOGLE_SPREADSHEET_RANGE = "Time Log!A2:E2";
+// https://developers.google.com/sheets/api/guides/concepts#expandable-1
+const GOOGLE_SPREADSHEET_RANGE = "A2:E2";
 
 /**
  * Functions are reusable building blocks of automation that accept
