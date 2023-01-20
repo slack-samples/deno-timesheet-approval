@@ -134,11 +134,11 @@ adding the following headers to Row 1:
 Employee | Time in | Time out | Breaks (min) | Hours
 ```
 
-Designating this spreadsheet as the desired datastore is done with environment
-variables, allowing for different spreadsheets to be used across your local and
+Designate this spreadsheet as the desired datastore through environment
+variables, which allows for different spreadsheets to be used across your local and
 hosted app instances.
 
-With the spreadsheet ID (the random-ish string found in the URL) copied, you're
+Copy your spreadsheet's ID (the random-ish string found in the URL). Now, you're 
 ready to set up your environment!
 
 #### Development environment variables
