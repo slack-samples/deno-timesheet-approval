@@ -135,10 +135,10 @@ Employee | Time in | Time out | Breaks (min) | Hours
 ```
 
 Designate this spreadsheet as the desired datastore through environment
-variables, which allows for different spreadsheets to be used across your local and
-hosted app instances.
+variables, which allows for different spreadsheets to be used across your local
+and hosted app instances.
 
-Copy your spreadsheet's ID (the random-ish string found in the URL). Now, you're 
+Copy your spreadsheet's ID (the random-ish string found in the URL). Now, you're
 ready to set up your environment!
 
 #### Development environment variables
