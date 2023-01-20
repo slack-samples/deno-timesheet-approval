@@ -90,8 +90,8 @@ Take your client ID and add it as the value for `client_id` in
 `external_auth/google_provider.ts` – the custom OAuth2 provider definition for
 your Google project.
 
-Once complete, use `slack run` or `slack deploy` to update your local or hosted
-app.
+Once complete, update your local or hosted app with `slack run` or
+`slack deploy` to create an environment for storing your client secret.
 
 #### Save your Client Secret
 
