@@ -13,7 +13,7 @@ const GoogleProvider = DefineOAuth2Provider({
     "provider_name": "Google",
     "authorization_url": "https://accounts.google.com/o/oauth2/auth",
     "token_url": "https://oauth2.googleapis.com/token",
-    "client_id": "", // Add your Client ID here!
+    "client_id": "", // TODO: Add your Client ID here!
     "scope": [
       "https://www.googleapis.com/auth/spreadsheets",
       "https://www.googleapis.com/auth/userinfo.email",
