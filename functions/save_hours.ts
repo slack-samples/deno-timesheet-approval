@@ -94,7 +94,7 @@ export default SlackFunction(
       }),
     });
 
-    if (!sheets.ok) {
+    if (sheets.status !== 200) {
       return {
         error: `Failed to save hours to the timesheet: ${sheets.statusText}`,
       };
