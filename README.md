@@ -91,7 +91,8 @@ Take your client ID and add it as the value for `client_id` in
 your Google project.
 
 Once complete, update your local or hosted app with `slack run` or
-`slack deploy` to create an environment for storing your client secret.
+`slack deploy` to create an environment for storing your external authentication
+client secret and access token.
 
 > :warning: Running these commands will warn you that a client secret must be
 > added for your OAuth2 provider. We'll take care of this in the next step!
