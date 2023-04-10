@@ -56,7 +56,7 @@ const timesheetForm = CollectHoursWorkflow.addStep(
 );
 
 CollectHoursWorkflow.addStep(SaveHoursFunctionDefinition, {
-  googleAccessTokenId: {},
+  googleAccessTokenId: { credential_source: "DEVELOPER" },
   employee: CollectHoursWorkflow.inputs.interactivity.interactor.id,
   time_in: timesheetForm.outputs.fields.time_in,
   time_out: timesheetForm.outputs.fields.time_out,
