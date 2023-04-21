@@ -41,7 +41,7 @@ To use this sample, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
 [Quickstart Guide](https://api.slack.com/future/quickstart).
 
-### Clone the Sample
+### Clone the Sample App
 
 Start by cloning this repository:
 
