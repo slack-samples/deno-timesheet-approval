@@ -39,7 +39,7 @@ project require that the workspace be part of
 
 To use this sample, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
-[Quickstart Guide](https://api.slack.com/future/quickstart).
+[Quickstart Guide](https://api.slack.com/automation/quickstart).
 
 ### Clone the Sample App
 
@@ -55,7 +55,7 @@ $ cd my-app
 
 ## Prepare Google Services
 
-With [external authentication](https://api.slack.com/future/external-auth) you
+With [external authentication](https://api.slack.com/automation/external-auth) you
 can programmatically interact with Google services and APIs from your app, as
 though you're the authorized user.
 
@@ -107,7 +107,7 @@ With your client secret ready, run the following command, replacing
 $ slack external-auth add-secret --provider google --secret GOOGLE_CLIENT_SECRET
 ```
 
-When prompted to select an app, choose the `(dev)` app only if you're running
+When prompted to select an app, choose the `(local)` app only if you're running
 the app locally.
 
 #### Initiate the OAuth2 Flow
@@ -147,7 +147,7 @@ ready to set up your environment!
 
 #### Development Environment Variables
 
-When [developing locally](https://api.slack.com/future/run), environment
+When [developing locally](https://api.slack.com/automation/run), environment
 variables found in the `.env` file at the root of your project are used. For
 local development, rename `.env.sample` to `.env` and add your spreadsheet ID to
 the file (replacing `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
@@ -159,7 +159,7 @@ GOOGLE_SPREADSHEET_ID=YOUR_SPREADSHEET_ID
 
 #### Production Environment Variables
 
-[Deployed apps](https://api.slack.com/future/deploy) use environment variables
+[Deployed apps](https://api.slack.com/automation/deploy) use environment variables
 that are added using `slack env`. To add your access token to a Workspace where
 your deployed app is installed, use the following command (once again, replacing
 `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
@@ -274,6 +274,12 @@ $ slack activity --tail
 
 Contains `apps.dev.json` and `apps.json`, which include installation details for
 development and deployed apps.
+
+### `external_auth/`
+
+External authentication enables connections to external services using OAuth2.
+Once connected, you can perform actions as the authorized user on these services
+using custom functions.
 
 ### `datastores/`
 
