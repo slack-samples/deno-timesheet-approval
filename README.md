@@ -10,10 +10,8 @@ https://user-images.githubusercontent.com/18134219/214685659-c48d0e5e-af02-4f11-
 - [Included Workflows](#included-workflows)
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
-  - [Clone the Sample App](#clone-the-sample-app)
-- [Prepare Google Services](#prepare-google-services)
-  - [Create a Google Cloud Project](#create-a-google-cloud-project)
-  - [Create a Google Sheet](#create-a-google-sheet)
+  - [Clone the Sample](#clone-the-sample)
+  - [Prepare Google Services](#prepare-google-services)
 - [Creating Triggers](#creating-triggers)
 - [Datastores](#datastores)
 - [Testing](#testing)
@@ -41,7 +39,7 @@ To use this sample, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
 [Quickstart Guide](https://api.slack.com/automation/quickstart).
 
-### Clone the Sample App
+### Clone the Sample
 
 Start by cloning this repository:
 
@@ -55,9 +53,9 @@ $ cd my-app
 
 ## Prepare Google Services
 
-With [external authentication](https://api.slack.com/automation/external-auth) you
-can programmatically interact with Google services and APIs from your app, as
-though you're the authorized user.
+With [external authentication](https://api.slack.com/automation/external-auth)
+you can programmatically interact with Google services and APIs from your app,
+as though you're the authorized user.
 
 The client credentials needed for these interactions can be collected from a
 Google Cloud project with OAuth enabled and with access to the appropriate
@@ -159,10 +157,10 @@ GOOGLE_SPREADSHEET_ID=YOUR_SPREADSHEET_ID
 
 #### Production Environment Variables
 
-[Deployed apps](https://api.slack.com/automation/deploy) use environment variables
-that are added using `slack env`. To add your access token to a Workspace where
-your deployed app is installed, use the following command (once again, replacing
-`YOUR_SPREADSHEET_ID` with your spreadsheet ID):
+[Deployed apps](https://api.slack.com/automation/deploy) use environment
+variables that are added using `slack env`. To add your access token to a
+Workspace where your deployed app is installed, use the following command (once
+again, replacing `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
 
 ```sh
 $ slack env add GOOGLE_SPREADSHEET_ID YOUR_SPREADSHEET_ID
