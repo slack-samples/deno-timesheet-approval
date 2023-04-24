@@ -4,7 +4,7 @@ import { SaveHoursFunctionDefinition } from "../functions/save_hours.ts";
 /**
  * A workflow is a set of steps that are executed in order.
  * Each step in a workflow is a function.
- * https://api.slack.com/future/workflows
+ * https://api.slack.com/automation/workflows
  */
 const CollectHoursWorkflow = DefineWorkflow({
   callback_id: "collect_hours",
@@ -23,7 +23,7 @@ const CollectHoursWorkflow = DefineWorkflow({
 /**
  * For collecting input from users, we recommend the
  * built-in OpenForm function as a first step.
- * https://api.slack.com/future/functions#open-a-form
+ * https://api.slack.com/automation/functions#open-a-form
  */
 const timesheetForm = CollectHoursWorkflow.addStep(
   Schema.slack.functions.OpenForm,

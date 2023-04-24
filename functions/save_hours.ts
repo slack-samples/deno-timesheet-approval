@@ -8,7 +8,7 @@ const GOOGLE_SPREADSHEET_RANGE = "A2:E2";
  * Functions are reusable building blocks of automation that accept
  * inputs, perform calculations, and provide outputs. Functions can
  * be used independently or as steps in workflows.
- * https://api.slack.com/future/functions/custom
+ * https://api.slack.com/automation/functions/custom
  */
 export const SaveHoursFunctionDefinition = DefineFunction({
   callback_id: "save_hours",
