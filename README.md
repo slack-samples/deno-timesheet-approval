@@ -273,17 +273,17 @@ $ slack activity --tail
 Contains `apps.dev.json` and `apps.json`, which include installation details for
 development and deployed apps.
 
-### `external_auth/`
-
-External authentication enables connections to external services using OAuth2.
-Once connected, you can perform actions as the authorized user on these services
-using custom functions.
-
 ### `datastores/`
 
 [Datastores](https://api.slack.com/automation/datastores) securely store data
 for your application on Slack infrastructure. Required scopes to use datastores
 include `datastore:write` and `datastore:read`.
+
+### `external_auth/`
+
+[External authentication](https://api.slack.com/automation/external-auth)
+enables connections to external services using OAuth2. Once connected, you can
+perform actions as the authorized user on these services using custom functions.
 
 ### `functions/`
 
