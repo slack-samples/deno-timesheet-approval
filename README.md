@@ -13,7 +13,6 @@ https://user-images.githubusercontent.com/18134219/214685659-c48d0e5e-af02-4f11-
   - [Clone the Sample](#clone-the-sample)
   - [Prepare Google Services](#prepare-google-services)
 - [Creating Triggers](#creating-triggers)
-- [Datastores](#datastores)
 - [Testing](#testing)
 - [Deploying Your App](#deploying-your-app)
 - [Viewing Activity Logs](#viewing-activity-logs)
@@ -226,12 +225,6 @@ To manually create a trigger, use the following command:
 $ slack trigger create --trigger-def triggers/collect_hours_trigger.ts
 ```
 
-## Datastores
-
-For storing data related to your app, datastores offer secure storage on Slack
-infrastructure. The use of a datastore requires the
-`datastore:write`/`datastore:read` scopes to be present in your manifest.
-
 ## Testing
 
 For an example of how to test a function, see `functions/save_hours_test.ts`.
@@ -272,12 +265,6 @@ $ slack activity --tail
 
 Contains `apps.dev.json` and `apps.json`, which include installation details for
 development and deployed apps.
-
-### `datastores/`
-
-[Datastores](https://api.slack.com/automation/datastores) securely store data
-for your application on Slack infrastructure. Required scopes to use datastores
-include `datastore:write` and `datastore:read`.
 
 ### `external_auth/`
 
