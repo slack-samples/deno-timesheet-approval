@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import CollectHoursWorkflow from "../workflows/collect_hours.ts";
 
 /**
@@ -8,13 +9,13 @@ import CollectHoursWorkflow from "../workflows/collect_hours.ts";
  * https://api.slack.com/automation/triggers
  */
 const collectHoursTrigger: Trigger<typeof CollectHoursWorkflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "Log hours worked",
   description: "Save your billable hours to the timesheet",
-  workflow: "#/workflows/collect_hours",
+  workflow: `#/workflows/${CollectHoursWorkflow.definition.callback_id}`,
   inputs: {
     interactivity: {
-      value: "{{data.interactivity}}",
+      value: TriggerContextData.Shortcut.interactivity,
     },
   },
 };
