@@ -85,16 +85,23 @@ You'll use these newly created client credentials in the next steps.
 
 #### Set the Client ID
 
-Take your client ID and add it as the value for `client_id` in
-`external_auth/google_provider.ts` – the custom OAuth2 provider definition for
-your Google project.
+Start by renaming the `.env.example` file at the top level of your project to
+`.env`, being sure not to commit this file to version control. This file will
+store sensitive, app-specific variables that are determined by the environment
+being used.
+
+Now take your client ID and add it as the value for `GOOGLE_CLIENT_ID` in the
+`.env` file. This value will be used in `external_auth/google_provider.ts` - the
+custom OAuth2 provider definition for your Google project.
 
 Once complete, update your local or hosted app with `slack run` or
 `slack deploy` to create an environment for storing your external authentication
 client secret and access token.
 
-> :warning: Running these commands will warn you that a client secret must be
-> added for your OAuth2 provider. We'll take care of this in the next step!
+> Note: Unlike environment variables used at runtime, this variable is only used
+> when generating your app manifest. Therefore, you do **not** need to use the
+> `slack env add` command to set this value for
+> [deployed apps](#deploying-your-app).
 
 #### Save the Client Secret
 
@@ -147,8 +154,8 @@ ready to set up your environment!
 
 When [developing locally](https://api.slack.com/automation/run), environment
 variables found in the `.env` file at the root of your project are used. For
-local development, rename `.env.sample` to `.env` and add your spreadsheet ID to
-the file (replacing `YOUR_SPREADSHEET_ID` with your spreadsheet ID):
+local development, add your spreadsheet ID to the `.env` file (replacing
+`YOUR_SPREADSHEET_ID` with your spreadsheet ID):
 
 ```bash
 # .env
