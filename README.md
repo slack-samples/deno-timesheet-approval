@@ -128,8 +128,26 @@ Google account you want to authenticate with:
 $ slack external-auth add
 ```
 
-Once you've successfully connected your account, you're ready to configure your
-Google Sheet and create a link into your workflow!
+Once you've successfully authenticated your account, you're almost ready to
+configure your Google Sheet and create a link into your workflow!
+
+#### Assign Authentication to the Workflow
+
+To complete the connection process, you need to let your app know which
+authenticated account you'll be using for specific workflows.
+
+Specify that the "Collect billable hours" workflow should use your recently
+authenticated account when making API calls using the following command:
+
+```sh
+$ slack external-auth select-auth
+```
+
+Select the workspace and app environment for your app, then select the
+`#/workflows/collect_hours` workflow and the `google` provider to choose the
+external account to use.
+
+With this, you're ready to make API calls from your workflow!
 
 ### Create a Google Sheet
 
