@@ -3,7 +3,7 @@
 This automation features a workflow that collects input from a form in Slack and
 saves the results to a Google Sheet.
 
-https://user-images.githubusercontent.com/18134219/214685659-c48d0e5e-af02-4f11-ba9a-5d2857f1fb5d.mov
+https://github.com/slack-samples/deno-timesheet-approval/assets/18134219/75224918-67fb-488a-8fa6-1e9af5f36de6
 
 **Guide Outline**:
 
