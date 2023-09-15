@@ -2,7 +2,7 @@ import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
 
 // Configuration information for the storing spreadsheet
 // https://developers.google.com/sheets/api/guides/concepts#expandable-1
-const GOOGLE_SPREADSHEET_RANGE = "A2:E2";
+const GOOGLE_SPREADSHEET_RANGE = "A2:F2";
 
 /**
  * Functions are reusable building blocks of automation that accept
@@ -70,6 +70,13 @@ export default SlackFunction(
       return { error: `Break time exceeds shift duration` };
     }
 
+    // Collect employee information
+    const user = await client.users.profile.get({ user: employee });
+    if (!user.ok) {
+      return { error: `Failed to gather employee profile: ${user.error}` };
+    }
+    const name = user.profile.real_name;
+
     // Collect Google access token
     const auth = await client.apps.auth.external.get({
       external_token_id: inputs.googleAccessTokenId,
@@ -90,7 +97,7 @@ export default SlackFunction(
       body: JSON.stringify({
         range: GOOGLE_SPREADSHEET_RANGE,
         majorDimension: "ROWS",
-        values: [[employee, startDate, endDate, timeOff, hours]],
+        values: [[name, employee, startDate, endDate, timeOff, hours]],
       }),
     });
 

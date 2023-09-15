@@ -158,7 +158,7 @@ To prepare this external datastore, start by
 using your authenticated account, then add the following headers to Row 1:
 
 ```
-Employee | Time in | Time out | Breaks (min) | Hours
+Name | Employee | Time in | Time out | Breaks (min) | Hours
 ```
 
 Designate this spreadsheet as the desired datastore through environment
