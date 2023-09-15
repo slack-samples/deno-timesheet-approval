@@ -71,7 +71,7 @@ export default SlackFunction(
     }
 
     // Collect Google access token
-    const auth = await client.apiCall("apps.auth.external.get", {
+    const auth = await client.apps.auth.external.get({
       external_token_id: inputs.googleAccessTokenId,
     });
 
