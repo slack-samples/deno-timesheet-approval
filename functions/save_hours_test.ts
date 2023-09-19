@@ -6,6 +6,15 @@ import SaveHoursFunction from "./save_hours.ts";
 // Replaces globalThis.fetch with the mocked copy
 mf.install();
 
+mf.mock("POST@/api/users.profile.get", () => {
+  return new Response(JSON.stringify({
+    ok: true,
+    profile: {
+      real_name: "Cactus Poke",
+    },
+  }));
+});
+
 mf.mock("POST@/api/apps.auth.external.get", async (args) => {
   const body = await args.formData();
 

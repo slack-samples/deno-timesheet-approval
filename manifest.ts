@@ -14,5 +14,8 @@ export default Manifest({
   workflows: [CollectHoursWorkflow],
   externalAuthProviders: [GoogleProvider],
   outgoingDomains: ["sheets.googleapis.com"],
-  botScopes: ["commands"],
+  botScopes: [
+    "commands",
+    "users.profile:read",
+  ],
 });
