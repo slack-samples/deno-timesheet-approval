@@ -63,11 +63,11 @@ export default SlackFunction(
 
     // Validate inputs
     if (time_out < time_in) {
-      return { error: `Start time is after end time` };
+      return { error: "Start time is after end time" };
     }
 
     if (time_out - time_in < timeOff * 60) {
-      return { error: `Break time exceeds shift duration` };
+      return { error: "Break time exceeds shift duration" };
     }
 
     // Collect employee information
