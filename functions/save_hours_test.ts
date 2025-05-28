@@ -9,11 +9,11 @@ function stubFetch() {
     globalThis,
     "fetch",
     async (url: string | URL | Request, options?: RequestInit) => {
-      const request = url instanceof Request ? url : new Request(url, options);
+      const req = url instanceof Request ? url : new Request(url, options);
 
-      assertEquals(request.method, "POST");
+      assertEquals(req.method, "POST");
 
-      switch (request.url) {
+      switch (req.url) {
         case "https://slack.com/api/users.profile.get":
           return new Response(JSON.stringify({
             ok: true,
@@ -22,7 +22,7 @@ function stubFetch() {
             },
           }));
         case "https://slack.com/api/apps.auth.external.get": {
-          const body = await request.formData();
+          const body = await req.formData();
           if (body.get("external_token_id") === "INVALID_TOKEN_ID") {
             return new Response(JSON.stringify({
               ok: false,
@@ -41,7 +41,9 @@ function stubFetch() {
           }));
         default:
           throw Error(
-            `No stub found for ${request.method} ${request.url}\nHeaders: ${request.headers}`,
+            `No stub found for ${req.method} ${req.url}\nHeaders: ${
+              JSON.stringify(Object.fromEntries(req.headers.entries()))
+            }`,
           );
       }
     },
