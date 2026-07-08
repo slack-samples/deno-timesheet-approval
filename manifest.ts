@@ -1,4 +1,4 @@
-import { Manifest } from "deno-slack-sdk/mod.ts";
+import { Manifest } from "@slack/sdk";
 import CollectHoursWorkflow from "./workflows/collect_hours.ts";
 import GoogleProvider from "./external_auth/google_provider.ts";
 
