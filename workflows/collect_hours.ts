@@ -1,4 +1,4 @@
-import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow, Schema } from "@slack/sdk";
 import { SaveHoursFunctionDefinition } from "../functions/save_hours.ts";
 
 /**

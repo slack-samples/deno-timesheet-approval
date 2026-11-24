@@ -1,4 +1,4 @@
-import { DefineFunction, Schema, SlackFunction } from "deno-slack-sdk/mod.ts";
+import { DefineFunction, Schema, SlackFunction } from "@slack/sdk";
 
 // Configuration information for the storing spreadsheet
 // https://developers.google.com/sheets/api/guides/concepts#expandable-1
